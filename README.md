@@ -9,3 +9,6 @@ Features
 Key access restriction: Registration in the messenger is possible only if you have a special access key. This adds an additional layer of security, as no one can create a new account or access existing ones without a key.
 
 pip install flask flask-socketio psycopg2
+
+Thanks for the help 
+https://github.com/FANATBEBRbl
