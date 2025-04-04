@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="NEVER.WASH - A messaging application" />
+    <title>NEVER.WASH Chat</title>
+    <link rel="stylesheet" href="/static/css/styles_chat.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="lato-regular">
+    <!-- Шапка сайта -->
+    <header class="lato-bold-italic">
+      <div class="header-content">
+        <!-- Информация о пользователе -->
+        <div class="user-info">
+          <div class="avatar-container">
+            <img class="avatar clickable-avatar" alt="Your avatar" />
+            <div id="avatar-options-modal" class="modal">
+              <div class="modal-content">
+                <a
+                  href="#"
+                  class="modal-link lato-bold"
+                  data-target="change-avatar"
+                  >Change avatar</a
+                >
+                <a
+                  href="#"
+                  class="modal-link lato-bold"
+                  data-target="invite-codes"
+                  >Invite codes</a
+                >
+                <a href="#" class="modal-link lato-bold" data-target="exit"
+                  >Exit</a
+                >
+                <a
+                  href="#"
+                  class="modal-link red-link lato-bold"
+                  data-target="delete-account"
+                  >Delete account</a
+                >
+              </div>
+            </div>
+          </div>
+          <span class="username"></span>
+        </div>
+
+        <!-- Информация о приложении -->
+        <div class="app-info">
+          <h1>NEVER.WASH</h1>
+          <img
+            src="/static/sources/logo.jpg"
+            alt="NEVER.WASH Logo"
+            class="logo"
+          />
+        </div>
+      </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-container">
+      <!-- Боковая панель с чатами -->
+      <aside class="chat-sidebar">
+        <h3 class="search-title">Find new chatters!</h3>
+        <div class="search-bar">
+          <input
+            type="text"
+            placeholder="Search users..."
+            class="search-input"
+            aria-label="Search users"
+          />
+        </div>
+        <nav>
+          <ul>
+            <!-- Список чатов будет добавлен через JavaScript -->
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Область контента -->
+      <section class="content">
+        <!-- Приветственное сообщение для новых пользователей -->
+        <div class="first_alert" style="display: none">
+          <h2>Welcome to NEVER.WASH!</h2>
+          <p>You have been invited by <span id="inviter-username"></span>.</p>
+          <img
+            id="inviter-avatar"
+            class="invite_avatar"
+            alt="Inviter's avatar"
+          />
+          <p>Maybe we should thank them?</p>
+          <button class="chat-button">Start chatting</button>
+        </div>
+
+        <!-- В шаблоне добавьте элементы для отображения кодов -->
+        <div id="invite-codes-modal" class="modal-content-block">
+          <h2>Invite Codes</h2>
+          <div class="invite-code">
+            <input type="text" id="invite-code-1" readonly />
+            <button class="copy-button">Copy</button>
+          </div>
+          <div class="invite-code">
+            <input type="text" id="invite-code-2" readonly />
+            <button class="copy-button">Copy</button>
+          </div>
+          <button class="close-button">Close</button>
+        </div>
+
+        <!-- Блок активного чата -->
+        <div id="active-chat" class="content-block" style="display: none">
+          <div class="chat-header">
+            <h2 id="active-chat-username"></h2>
+          </div>
+          <div class="chat-messages-container">
+            <div id="chat-messages" class="chat-messages" aria-live="polite">
+              <!-- Сообщения будут добавлены через JavaScript -->
+            </div>
+          </div>
+          <div class="chat-input">
+            <input
+              type="text"
+              id="message-input"
+              placeholder="Type a message..."
+              aria-label="Message input"
+            />
+            <button id="send-message">Send</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Подключение скриптов -->
+    <script type="module" src="/static/js/chat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js"></script>
+  </body>
+</html>

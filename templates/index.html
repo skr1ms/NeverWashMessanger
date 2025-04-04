@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Авторизация</title>
+  <link rel="stylesheet" href="/static/css/styles_auth.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="video-background">
+    <video autoplay muted loop id="bg-video">
+      <source src="/static/sources/background_index.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+  </div>
+  <div class="auth-container">
+    <h1>Welcome to <span class="gradient-text">NEVER.WASH</span> CHAT</h1>
+    <form id="auth-form" class="auth-form">
+      <input type="text" id="username" placeholder="@username" maxlength="50" required>
+      <p class="input-hint">Username must start with @</p>
+      <input type="password" id="password" placeholder="Password" maxlength="50" required>
+      <button type="submit" class="login-button">Sign in</button>
+      <p class="switch-description">Don't have an account? <a href="#" class="switch-to-signup">Sign up</a></p>
+    </form>
+    <form id="reg-form" class="auth-form" style="display: none;">
+      <input type="text" id="new-username" placeholder="@username" maxlength="50" required>
+      <p class="input-hint">Username must start with @</p>
+      <input type="password" id="new-password" placeholder="Password" maxlength="50" required>
+      <p class="input-hint">Password must be at least 8 characters with 1 special character</p>
+      <input type="password" id="auth-code" placeholder="Invite verification code" maxlength="64" required>
+      <div class="reg-info">
+        <p>A verification code is required for registration. Each chat participant is issued two codes to invite others.</p>
+      </div>
+      <button type="submit" class="login-button">Sign up</button>
+      <p class="switch-description">Already have an account? <a href="#" class="switch-to-signin">Sign in</a></p>
+    </form>
+    <p id="error-message" class="error"></p>
+  </div>
+  <footer>
+    <div class="run-string">
+      <span>NEVER.WASH TEAM</span>
+      <span>//</span>
+      <span>@fanatbebrbl</span>
+      <span>@ananestea</span>
+      <span>@takuya13</span>
+      <span>@aleksey_muller</span>
+      <span>@R0m_Coin</span>
+    </div>
+  </footer>
+  <script type="module" src="/static/js/auth.js"></script>
+</body>
+</html>
