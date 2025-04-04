@@ -3,10 +3,9 @@
 ![photo_2025-01-30_21-10-49](https://github.com/user-attachments/assets/6cf7a421-bd77-4267-a073-df9839a0e828)
 
 
-Never.Wash Messanger — это инновационный мессенджер, который предлагает вам максимальную защиту и конфиденциальность в общении. В современном мире, где информация легко становится доступной, Never.Wash Messanger гарантирует, что ваши сообщения останутся только между вами и получателем. Независимо от того, ведете ли вы деловую переписку, делитесь личными моментами или просто хотите сохранить свои мысли в тайне, этот мессенджер станет вашим надежным помощником.
+Never.Wash Messanger is an innovative messenger that offers you maximum protection and privacy in communication. In today's world, where information is easily accessible, Never.Wash Messenger ensures that your messages stay only between you and the recipient. Whether you're conducting business correspondence, sharing personal moments, or just wanting to keep your thoughts private, this messenger will be your reliable assistant.
 
-# Особенности
+Features
+Key access restriction: Registration in the messenger is possible only if you have a special access key. This adds an additional layer of security, as no one can create a new account or access existing ones without a key.
 
-- Ограничение доступа по ключам: Регистрация в мессенджере возможна только при наличии специального ключа доступа. Это добавляет дополнительный уровень безопасности, так как без ключа никто не сможет создать новый аккаунт или получить доступ к существующим.
-
-- и вообще мы молодцы
+pip install flask flask-socketio psycopg2
